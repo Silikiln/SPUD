@@ -7,8 +7,8 @@ public class SPUDTest : ModuleRules
 	public SPUDTest(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
-
-        PrivateDependencyModuleNames.AddRange(
+		bAddDefaultIncludePaths = true;
+		PrivateDependencyModuleNames.AddRange(
             new string[]
             {
                 "Core",

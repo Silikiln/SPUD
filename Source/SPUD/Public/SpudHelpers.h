@@ -25,7 +25,7 @@ class SPUD_API ASpudActorBase : public AActor, public ISpudObject
 public:
 	/// GUID required to successfully persist runtime-created objects
 	/// This will be generated on save if necessary, or you can initialise it yourself
-	UPROPERTY(BlueprintReadOnly)
+	UPROPERTY(BlueprintReadOnly, Category = "SPUD")
 	FGuid SpudGuid;
 };
 
@@ -40,7 +40,7 @@ class SPUD_API ASpudPawnBase : public APawn, public ISpudObject
 public:
 	/// GUID required to identify runtime-created objects
 	/// This will be generated on save if necessary, or you can initialise it yourself
-	UPROPERTY(BlueprintReadOnly)
+	UPROPERTY(BlueprintReadOnly, Category = "SPUD")
 	FGuid SpudGuid;
 };
 
@@ -55,7 +55,7 @@ class SPUD_API ASpudCharacterBase : public ACharacter, public ISpudObject
 public:
 	/// GUID required to identify runtime-created objects
 	/// This will be generated on save if necessary, or you can initialise it yourself
-	UPROPERTY(BlueprintReadOnly)
+	UPROPERTY(BlueprintReadOnly, Category = "SPUD")
 	FGuid SpudGuid;
 	
 };

@@ -1,25 +1,25 @@
 {
-	"FileVersion" : 3,
-	"Version" : 1,
-	"VersionName" : "1.0",
-	"FriendlyName" : "Steve's Persistent Unreal Data (SPUD)",
-	"Description" : "Streaming-aware persistence and save game system",
-	"Category" : "Code Utilities",
-	"CreatedBy" : "Steve Streeting",
-	"CreatedByURL" : "https://www.stevestreeting.com",
-	"DocsURL" : "",
-	"MarketplaceURL" : "",
-	"SupportURL" : "https://github.com/sinbad/SPUD",
-	"EnabledByDefault" : true,
-	"CanContainContent" : false,
-	"IsBetaVersion" : true,
-	"Installed" : false,
-	"Modules" :
-	[
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"EngineVersion": "5.3.0",
+	"FriendlyName": "Steve's Persistent Unreal Data (SPUD)",
+	"Description": "Streaming-aware persistence and save game system",
+	"Category": "Code Utilities",
+	"CreatedBy": "Steve Streeting",
+	"CreatedByURL": "https://www.stevestreeting.com",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "https://github.com/sinbad/SPUD",
+	"EnabledByDefault": true,
+	"CanContainContent": true,
+	"IsBetaVersion": true,
+	"Installed": false,
+	"Modules": [
 		{
-			"Name" : "SPUD",
-			"Type" : "Runtime",
-			"LoadingPhase" : "Default"
+			"Name": "SPUD",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
 		},
 		{
 			"Name": "SPUDEditor",
@@ -31,6 +31,6 @@
 			"Type": "DeveloperTool",
 			"LoadingPhase": "Default"
 		}
-		
-	]	
+	],
+	"IsExperimentalVersion": false
 }

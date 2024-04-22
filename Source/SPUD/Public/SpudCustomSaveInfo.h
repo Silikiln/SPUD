@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 #include "CoreMinimal.h"
 
@@ -13,7 +13,7 @@
 /// Helper class to allow users to apply custom properties to the header information of save files,
 /// which can then be read back on save/load screens without loading the entire save.
 /// Could be things like completion percentage, hours played, current quests, character class, character level etc
-UCLASS(BlueprintType)
+UCLASS(BlueprintType, Category="SPUD")
 class SPUD_API USpudCustomSaveInfo : public UObject
 {
 	GENERATED_BODY()
@@ -118,22 +118,22 @@ protected:
 	
 public:
 	/// Clear any properties in this instance
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "SPUD")
 	void Reset() { Data.Reset(); }
 	
 	/// Set a vector
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "SPUD")
 	void SetVector(const FString& Name, const FVector& V) { Set(Name, V); }
 	/**
 	 * Get a vector
 	 * @param OutVector The vector we read if successful
 	 * @return True if the value was read successfully
 	 */
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "SPUD")
     bool GetVector(const FString& Name, FVector& OutVector) { return Get(Name, OutVector); }
 
 	/// Set a string
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "SPUD")
     void SetString(const FString& Name, const FString& S)
 	{
 		// FStrings are variable length
@@ -145,11 +145,11 @@ public:
 	* @param OutString The string we read if successful
 	* @return True if the value was read successfully
 	*/
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "SPUD")
     bool GetString(const FString& Name, FString& OutString) { return Get(Name, OutString); }
 
 	/// Set text
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "SPUD")
     void SetText(const FString& Name, const FText& S)
 	{
 		// FTexts are variable length
@@ -160,51 +160,51 @@ public:
 	* @param OutText The text we read if successful
 	* @return True if the value was read successfully
 	*/
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "SPUD")
     bool GetText(const FString& Name, FText& OutText) { return Get(Name, OutText); }
 
 	/// Set an int
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "SPUD")
     void SetInt(const FString& Name, int V) { Set(Name, V); }
 	/**
 	* Get an int
 	* @param OutInt The int we read if successful
 	* @return True if the value was read successfully
 	*/
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "SPUD")
     bool GetInt(const FString& Name, int& OutInt) { return Get(Name, OutInt); }
 
 	/// Set an int64
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "SPUD")
     void SetInt64(const FString& Name, int64 V) { Set(Name, V); }
 	/**
 	* Get an int64
 	* @param OutInt64 The int64 we read if successful
 	* @return True if the value was read successfully
 	*/
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "SPUD")
     bool GetInt64(const FString& Name, int64& OutInt64) { return Get(Name, OutInt64); }
 
 	/// Set a float
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "SPUD")
     void SetFloat(const FString& Name, float V) { Set(Name, V); }
 	/**
 	* Get a float
 	* @param OutFloat The float we read if successful
 	* @return True if the value was read successfully
 	*/
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "SPUD")
     bool GetFloat(const FString& Name, float& OutFloat) { return Get(Name, OutFloat); }
 
 	/// Set a byte
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "SPUD")
     void SetByte(const FString& Name, uint8 V) { Set(Name, V); }
 	/**
 	* Get a byte
 	* @param OutByte The byte we read if successful
 	* @return True if the value was read successfully
 	*/
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintCallable, Category = "SPUD")
     bool GetByte(const FString& Name, uint8& OutByte) { return Get(Name, OutByte); }
 
 	/// Populate the internal data (copies)
